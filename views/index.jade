@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+		title= title
+		link(rel='stylesheet', href='libs/bootstrap/dist/css/bootstrap.min.css')
+		link(rel='stylesheet', href='css/style.css')
+		script(type='text/javascript', src='libs/bootstrap/dist/js/bootstrap.min.js')
+	body
+		div.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+			div.container
+				div.navbar-header
+					a.navbar-brand(href='#/polls')= title
+				div.collapse.navbar-collapse
+		div.container
+			h1= title
+		script(src='libs/requirejs/require.js', data-main='rconfig.js')
+		- if (env == "development")
+			script(src='//localhost:35729/livereload.js')
